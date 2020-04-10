@@ -23,6 +23,14 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    historyApiFallback: true,
+    contentBase: paths.build,
+    open: true,
+    compress: true,
+    hot: true,
+    port: 9000,
+  },
   plugins: [ 
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
