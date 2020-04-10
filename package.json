@@ -1,0 +1,25 @@
+{
+  "name": "8th-react-intensive-el-dombrovan",
+  "version": "1.0.0",
+  "description": "Apiko Intensive Project",
+  "main": ".prettierrc.js",
+  "dependencies": {
+    "prettier": "^2.0.4",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/8th-apiko-intensive/students/8th-react-intensive-el-dombrovan.git"
+  },
+  "keywords": [
+    "js",
+    "react"
+  ],
+  "author": "El Dombrovan",
+  "license": "ISC"
+}
