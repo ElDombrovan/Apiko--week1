@@ -9,7 +9,7 @@ const renderElement = ({ tagName, attrs, children }) => {
       element.appendChild(render(child));
     }
   
-    return $el;
+    return element;
   };
   
   export const render = (node) => {
