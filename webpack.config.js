@@ -18,11 +18,18 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
+        test: /\.(scss|css)$/,
+        use:  [  
+          'style-loader', 
+          MiniCssExtractPlugin.loader, 
+          { loader: 'css-loader', options: { sourceMap: true, importLoaders: 1 } },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } },
+        ]
       }
     ]
   },
+  devtool: 'inline-source-map',
   devServer: {
     historyApiFallback: true,
     contentBase: './public',
