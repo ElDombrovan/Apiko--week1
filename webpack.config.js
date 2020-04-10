@@ -25,7 +25,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: paths.build,
+    contentBase: './public',
     open: true,
     compress: true,
     hot: true,
