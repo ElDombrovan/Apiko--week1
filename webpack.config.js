@@ -1,10 +1,12 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 module.exports = {
   entry: { main: './src/index.js' },
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'main.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -16,16 +18,21 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract(
-          {
-            fallback: 'style-loader',
-            use: ['css-loader']
-          })
+        test: /\.scss$/,
+        use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
       }
     ]
   },
   plugins: [ 
-    new ExtractTextPlugin({filename: 'style.css'})
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/index.html',
+      filename: 'index.html'
+    }),
   ]
 };
