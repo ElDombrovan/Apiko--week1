@@ -1,8 +1,8 @@
 import { React } from '../dom/dom.js';
 
-export const App = React.createElement('div', {
+const App = React.createElement('div', {
     attributes: {
-        style: 'background-color: red',
+        style: 'background-color: red', 
     },
     children: [
         React.createElement('span', {
@@ -14,7 +14,7 @@ export const App = React.createElement('div', {
                 style: 'padding: 5px',
                 style: 'border: 1px solid white'
             },
-            children: {
+            children: [
                 React.createElement('p', {
                    attributes: {
                        style: 'color: white',
@@ -22,7 +22,9 @@ export const App = React.createElement('div', {
                    },
                    children: 'Paragraph tag with div parent' 
                 })
-            }
+            ]       
         })
     ]
 });
+
+export default App;
