@@ -1,6 +1,6 @@
-import { React } from '../dom/dom.js';
+import React from '../dom/dom.js';
 
-export const PostListItem = props => {
+const PostListItem = props => {
     const { id, title, body } = props;
 
     const element = React.createElement('div', {
@@ -9,17 +9,17 @@ export const PostListItem = props => {
             id: id,
         },
         children: [
-            React.createElement('span',{
+            React.createElement('span', {
                 attributes: {},
                 children: [`Id: ${id}`],
             }),
-            React.createElement('p',{
+            React.createElement('p', {
                 attributes: {
                     style: 'font-weight: bold'
                 },
                 children: [title],
             }),
-            React.createElement('p',{
+            React.createElement('p', {
                 attributes: {},
                 children: [body],
             }),
@@ -27,3 +27,5 @@ export const PostListItem = props => {
     });
     return element;
 };
+
+export default PostListItem;
