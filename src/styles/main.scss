@@ -1,3 +1,9 @@
+@import './base.scss';
+@import './layout.scss';
+
+@import 'components/PostList.scss';
+@import 'components/PostListItem.scss';
+
 body {
     background-color: cyan;
 }

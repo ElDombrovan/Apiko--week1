@@ -12,7 +12,7 @@ const App = async() => {
 
     const element = React.createElement('div', {
         attributes: {
-            style: 'background-color: red', 
+            class: 'App',
         },
         children: [children],
     });
