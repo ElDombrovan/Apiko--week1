@@ -23,7 +23,8 @@ module.exports = {
           'style-loader', 
           MiniCssExtractPlugin.loader, 
           { loader: 'css-loader', options: { sourceMap: true, importLoaders: 1 } },
-          { loader: 'postcss-loader', options: { sourceMap: true } },
+          //TO DO : fix or create config for post css package for future tasks
+          //{ loader: 'postcss-loader', options: { sourceMap: true, inportLoaders: 1 } },
           { loader: 'sass-loader', options: { sourceMap: true } },
         ]
       }
@@ -49,5 +50,6 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html'
     }),
+
   ]
 };

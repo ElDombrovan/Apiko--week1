@@ -5,11 +5,11 @@ const App = React.createElement('div', {
         style: 'background-color: red', 
     },
     children: [
-        React.createElement('span', {
+        React.createElement('span',{
             attributes: {},
-            children: 'Test text for span tag'
+            children: ['Test text for span tag'],
         }),
-        React.createElement(' div', {
+        React.createElement('div', {
             attributes: {
                 style: 'padding: 5px',
                 style: 'border: 1px solid white'
@@ -20,7 +20,7 @@ const App = React.createElement('div', {
                        style: 'color: white',
                        style: 'text-decoration: underline'
                    },
-                   children: 'Paragraph tag with div parent' 
+                   children: ['Paragraph tag with div parent'],
                 })
             ]       
         })
