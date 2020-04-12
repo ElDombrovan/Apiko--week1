@@ -5,6 +5,12 @@ import App from './js/components/App.js';
 
 import './styles/main.scss';
 
-const root = document.getElementById('root');
-const app = React.render(App);
-React.mountElement(app, root);
+const init = () => {
+    const root = document.getElementById('root');
+    const appElement = App();
+    const app = React.render(appElement);
+
+    React.mountElement(app, root);
+}
+
+init();

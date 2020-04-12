@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.9.5",
     "autoprefixer": "^9.7.6",
     "babel-core": "^6.26.3",
@@ -30,7 +31,7 @@
     "webpack-md5-hash": "0.0.6"
   },
   "scripts": {
-    "dev": "webpack --mode=development && webpack-dev-server"
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
