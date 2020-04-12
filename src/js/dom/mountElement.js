@@ -1,4 +1,7 @@
+import { cleanNode } from '../helpers/cleanNode.js';
+
 export const mountElement = (node, target) => {
-    target.replaceWith(node);
-    return node;
-};
+    cleanNode(target);
+    target.appendChild(node);
+}
+    
