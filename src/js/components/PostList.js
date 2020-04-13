@@ -7,7 +7,7 @@ const PostList = posts => {
         PostListItem({ id, title, body })
     );
 
-    const element = React.createElement('div', {
+    const element = React.createElement('ul', {
         attributes: {
             class: 'PostList',
         },
