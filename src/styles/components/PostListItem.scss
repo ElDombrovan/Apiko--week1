@@ -1,15 +1,19 @@
+@import '../variables.scss';
 
 .PostListItem {
     $parent: &;
     list-style: none;
-    margin: 10px;
-    padding: 10px;
+    margin: $gutter;
+    padding: $gutter;
 
     &__checkbox {
-        &, label { cursor: pointer;}
+        &, + label { 
+            cursor: pointer;
+            &:hover {font-weight: 600}
+        }
         &:checked {
             ~ * {
-                color: green;
+                color: $light_green-25;
                 text-decoration: line-through;
             }
         }
@@ -17,5 +21,9 @@
 
     &__body {
         text-align: justify;
+    }
+
+    &:hover{
+        color:$dark_blue-10;
     }
 }
