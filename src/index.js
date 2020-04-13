@@ -1,17 +1,39 @@
 import React from './js/dom/dom.js';
 
-import App from './js/components/App.js';
-
 import './styles/main.scss';
+import PostList from './js/components/PostList.js';
+import MoreButton from './js/components/MoreButton.js';
 
+import { apiDataFetch, API_URL, POST_LIMIT, INITIAL_PAGE } from './js/api.js';
+
+const showMore = () => {
+    console.log('clicked');
+};
 
 const init = async() => {
-    const root = document.getElementById('root');
 
-    const appElement = await App();
-    const app = React.render(appElement);
+    // Root
+    const $root = document.getElementById('root');
 
-    React.mountElement(app, root);
+    // Post list
+    let currentPage = INITIAL_PAGE;
+    const posts = await apiDataFetch(`${API_URL}?_page=${currentPage}&_limit=${POST_LIMIT}`);
+
+    const postList = PostList(posts);
+    React.render($root, postList);
+
+    // Button
+    const $button = MoreButton();
+    React.render($root, $button);
+
+    const $DOMbutton = document.querySelector('.MoreButton');
+
+    $DOMbutton.addEventListener('click', showMore, true);
+
+
 }
 
 init();
+
+
+
