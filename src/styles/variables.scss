@@ -7,10 +7,16 @@ $light_green-25: lighten($color: $light_green, $amount: 25%);
 
 $gutter: 10px;
 
+$font_size-min: 14px;
+$font_size-max: 20px;
+
+$screen_width-min: 320px;
+$screen_width-max: 1200px;
+
 $breakpoints: (
-    'extra-small': 320px,
+    'extra-small': $screen_width-min,
     'small': 600px,
     'medium': 768px,
     'large': 992px,
-    'extra-large': 1200px,
+    'extra-large': $screen_width-max,
 );

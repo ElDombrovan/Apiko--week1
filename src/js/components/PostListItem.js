@@ -14,7 +14,6 @@ const PostListItem = props => {
                     type: 'checkbox',
                     class: 'PostListItem__checkbox',
                     id: `checkbox-${id}`,
-                    onchange: '',
                 },
                 children: [],
             }),

@@ -1,1 +1,10 @@
 // typography rules etc.
+@import './variables.scss', './mixins.scss';
+
+p {
+    @include fluid-type($screen_width-min,$screen_width-max, $font_size-min, $font_size-max - 4px);
+}
+
+label {
+    @include fluid-type($screen_width-min,$screen_width-max, $font_size-min + 2px, $font_size-max - 2px);
+}
