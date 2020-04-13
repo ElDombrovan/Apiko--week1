@@ -1,3 +1,4 @@
+
 .PostListItem {
     $parent: &;
     list-style: none;
@@ -5,10 +6,10 @@
     padding: 10px;
 
     &__checkbox {
-        + label { cursor: pointer;}
+        &, label { cursor: pointer;}
         &:checked {
-            + label, ~ h3, ~ p {
-                color: #a9a8a8;
+            ~ * {
+                color: green;
                 text-decoration: line-through;
             }
         }
