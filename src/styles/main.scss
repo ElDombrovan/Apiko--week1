@@ -1,9 +1,5 @@
-@import './base.scss';
-@import './layout.scss';
-@import './mixins.scss';
-@import './components/App.scss';
-@import './components/PostList.scss';
-@import './components/PostListItem.scss';
+@import './base.scss', './layout.scss', './mixins.scss';
+@import './components/App.scss', './components/PostList.scss', './components/PostListItem.scss';
 
 body {
     background-color:#f4f4f4;
