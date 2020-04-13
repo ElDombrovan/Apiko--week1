@@ -2,9 +2,14 @@
 
 .PostListItem {
     $parent: &;
+
     list-style: none;
     margin: $gutter;
     padding: $gutter;
+
+    &:hover{
+        color:$dark_blue-10;
+    }
 
     &__checkbox {
         &, + label { 
@@ -23,7 +28,10 @@
         text-align: justify;
     }
 
-    &:hover{
-        color:$dark_blue-10;
+    &--remove {
+        display: none;
+
+        &.active { display: block}
     }
+
 }

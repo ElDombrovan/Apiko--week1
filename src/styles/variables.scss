@@ -6,3 +6,11 @@ $dark_blue-10: lighten($color: $dark_blue, $amount: 10%);
 $light_green-25: lighten($color: $light_green, $amount: 25%);
 
 $gutter: 10px;
+
+$breakpoints: (
+    'extra-small': 320px,
+    'small': 600px,
+    'medium': 768px,
+    'large': 992px,
+    'extra-large': 1200px,
+);

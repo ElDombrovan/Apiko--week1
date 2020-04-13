@@ -1,6 +1,11 @@
+@import '../variables.scss', '../mixins.scss';
+
 .App {
     background-color: white;
-    width: 30%;
     display: block;
     margin: 0 auto;
+
+    @include screen-for('extra-small'){ width: 100%;}
+    @include screen-for('medium'){ width: 50%;}
+    @include screen-for('large'){ width: 30%;}
 }
