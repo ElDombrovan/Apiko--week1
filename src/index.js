@@ -4,6 +4,7 @@ import App from './js/components/App.js';
 
 import './styles/main.scss';
 
+
 const init = async() => {
     const root = document.getElementById('root');
 

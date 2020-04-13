@@ -12,14 +12,16 @@ const PostListItem = props => {
             React.createElement('input', {
                 attributes: {
                     type: 'checkbox',
+                    class: 'PostListItem__checkbox',
                     id: `checkbox-${id}`,
                     onchange: '',
                 },
                 children: [],
             }),
-            React.createElement('span', {
+            React.createElement('label', {
                 attributes: {
                     class: 'PostListItem__number',
+                    for: `checkbox-${id}`,
                 },
                 children: [`Task #${id}`],
             }),

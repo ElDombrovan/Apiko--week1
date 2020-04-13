@@ -1,9 +1,10 @@
 @import './base.scss';
 @import './layout.scss';
+@import './components/App.scss';
+@import './components/PostList.scss';
+@import './components/PostListItem.scss';
 
-@import 'components/PostList.scss';
-@import 'components/PostListItem.scss';
 
 body {
-    background-color: cyan;
+    background-color:#f4f4f4;
 }

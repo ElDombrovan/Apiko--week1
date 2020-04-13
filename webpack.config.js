@@ -33,7 +33,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     historyApiFallback: true,
-    contentBase: './public',
+    contentBase: path.join(__dirname, 'public'),
     open: true,
     compress: true,
     hot: true,
