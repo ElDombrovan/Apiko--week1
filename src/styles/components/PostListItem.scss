@@ -27,11 +27,4 @@
     &__body {
         text-align: justify;
     }
-
-    &--remove {
-        display: none;
-
-        &.active { display: block}
-    }
-
 }
