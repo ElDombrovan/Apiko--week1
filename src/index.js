@@ -15,6 +15,7 @@ const $moreButton = MoreButton();
 const getContent = async (page) => await apiDataFetch(`${API_URL}?_page=${page}&_limit=${POST_LIMIT}`);
 
 const init = async() => {
+    React.render($root, $search);
     
     const currentPosts = await getContent(currentPage);
     const postList = PostList(currentPosts);
@@ -28,7 +29,6 @@ const init = async() => {
 }
 
 init();
-
 
 const showMore = async () => {
     if ( currentPage >= 10){
