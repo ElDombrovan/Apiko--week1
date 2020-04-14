@@ -29,8 +29,6 @@ const init = async() => {
     const $DOMbutton = document.querySelector('.MoreButton');
 
     $DOMbutton.addEventListener('click', showMore, true);
-
-
 }
 
 init();

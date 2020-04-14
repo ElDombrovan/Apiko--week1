@@ -1,0 +1,17 @@
+@import '../variables.scss';
+
+.MoreButton {
+    display: block;
+    font-weight: bold;
+    color: $white;
+    background-color: $light_green;
+    border-radius: $gutter/2;
+    border: none;
+    margin: $gutter*2 auto;
+
+    &:hover {
+        color: $light_green;
+        background-color: $light_green-25;
+        border: 2px solid $light_green;
+    }
+}

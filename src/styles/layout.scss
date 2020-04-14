@@ -1,5 +1,12 @@
 // nav, forms, header etc.
+
+@import './variables.scss';
 ul {
     margin: 0;
     padding: 0;
+  }
+
+  button {
+    cursor: pointer;
+    padding: $gutter $gutter*2;
   }
